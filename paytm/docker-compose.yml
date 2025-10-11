@@ -1,0 +1,19 @@
+---
+version: '3.8'
+services:
+  bus:
+    container_name: bus
+    build: ./bus-tickets/
+    ports:
+      - "8081:80"
+  movie:
+    container_name: movie
+    build: ./movie-tickets/
+    ports:
+      - "8082:80"
+  train:
+    container_name: train
+    build: ./train-tickets/
+    ports:
+      - "8083:80"
+...
